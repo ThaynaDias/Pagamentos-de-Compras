@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <CheckBox
+        android:id="@+id/ck_pao"
+        android:layout_width="155dp"
+        android:layout_height="23dp"
+        android:layout_marginTop="8dp"
+        android:text="Pão (R$ 2,20)"
+        app:layout_constraintEnd_toEndOf="@+id/ck_carne"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/ck_carne"
+        app:layout_constraintTop_toBottomOf="@+id/ck_carne" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="159dp"
+        android:layout_height="23dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="32dp"
+        android:text="Escolha seu produto:"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.032"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/ck_arroz"
+        android:layout_width="142dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="16dp"
+        android:text="Arroz (R$ 3,00)"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <CheckBox
+        android:id="@+id/ck_carne"
+        android:layout_width="156dp"
+        android:layout_height="23dp"
+        android:layout_marginTop="8dp"
+        android:text="Carne (R$ 12,30)"
+        app:layout_constraintEnd_toEndOf="@+id/ck_arroz"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/ck_arroz"
+        app:layout_constraintTop_toBottomOf="@+id/ck_arroz" />
+
+    <CheckBox
+        android:id="@+id/ck_leite"
+        android:layout_width="144dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="8dp"
+        android:text="Leite (R$ 5,50)"
+        app:layout_constraintEnd_toEndOf="@+id/ck_pao"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/ck_pao"
+        app:layout_constraintTop_toBottomOf="@+id/ck_pao" />
+
+    <CheckBox
+        android:id="@+id/ck_ovos"
+        android:layout_width="151dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="8dp"
+        android:text="Ovos (R$ 7,50)"
+        app:layout_constraintEnd_toEndOf="@+id/ck_leite"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/ck_leite"
+        app:layout_constraintTop_toBottomOf="@+id/ck_leite" />
+
+    <Button
+        android:id="@+id/total"
+        android:layout_width="122dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="4dp"
+        android:text="TOTAL"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/vercheck"
+        app:layout_constraintEnd_toStartOf="@+id/vercheck"
+        app:layout_constraintHorizontal_bias="0.21"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ck_ovos"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/vercheck"
+        android:layout_width="79dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="248dp"
+        android:layout_marginEnd="156dp"
+        android:layout_marginRight="156dp"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="12dp"
+        android:text="Algum desconto ?"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.028"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/total" />
+
+    <RadioGroup
+        android:id="@+id/opçao"
+        android:layout_width="194dp"
+        android:layout_height="107dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.11"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3">
+
+        <RadioButton
+            android:id="@+id/ck_sem"
+            android:layout_width="189dp"
+            android:layout_height="26dp"
+            android:text="Sem desconto" />
+
+        <RadioButton
+            android:id="@+id/ck_5"
+            android:layout_width="188dp"
+            android:layout_height="27dp"
+            android:text="5%" />
+
+        <RadioButton
+            android:id="@+id/ck_10"
+            android:layout_width="188dp"
+            android:layout_height="25dp"
+            android:text="10%" />
+
+        <RadioButton
+            android:id="@+id/ck_15"
+            android:layout_width="188dp"
+            android:layout_height="26dp"
+            android:text="15%" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Valor pago pelo cliente"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.089"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/opçao" />
+
+    <Button
+        android:id="@+id/btpagar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:text="EFETUAR PAGAMENTO"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.455"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pagamento" />
+
+    <EditText
+        android:id="@+id/pagamento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.119"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
